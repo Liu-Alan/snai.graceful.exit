@@ -37,7 +37,7 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	// 实时拉取链数据池,非阻塞
+	// 实时工作池,非阻塞
 	app.Task.CreatePool(&wg)
 
 	// 定时统计,非阻塞
