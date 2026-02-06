@@ -71,7 +71,7 @@ func main() {
 	app.Cron.Stop()
 	fmt.Printf("[退出]Cron 已安全停止\n")
 
-	// 顺序 C: 关闭 Channel 并等待 Pool（处理完存量数据）
+	// 顺序 3: 关闭 Channel 并等待 Pool（处理完存量数据）
 	close(idChan)
 	fmt.Printf("[退出]等待 Pool 处理剩余数据...\n")
 	wg.Wait()
